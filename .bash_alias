@@ -1,0 +1,11 @@
+alias ls='ls --color=auto'
+alias ll='ls -shlF'
+
+alias mkdir='mkdir -v'
+alias mv='mv -v'
+alias cp='cp -v'
+alias rm='rm -v'
+alias ln='ln -v'
+
+
+
