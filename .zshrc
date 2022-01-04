@@ -112,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 
 DEFAULT_USER="hszzz"
 
-# change dir to home
+# change dir to home (wsl ubuntu)
 cd ~
 
 # alias
