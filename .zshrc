@@ -116,5 +116,6 @@ DEFAULT_USER="hszzz"
 cd ~
 
 # alias
-# alias cp="cp -i"
-
+if [ -f ~/.bash_alias ]; then
+    . ~/.bash_alias
+fi
