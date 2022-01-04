@@ -7,6 +7,7 @@ echo "configure my personal run config ..."
 CONFIG_FILES=(
     .zshrc
     .vimrc
+    .gitconfig
 )
 BACKUP_DIR=~/.myrc.bak
 MY_RC_PATH=.myrc
