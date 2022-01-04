@@ -8,5 +8,7 @@
 	br = branch
 	cmt = commit -m
 	st = status
+    pu = push
+    pl = pull
 	adog = log --all --decorate --oneline --graph
 
