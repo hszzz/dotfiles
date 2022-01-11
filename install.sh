@@ -5,6 +5,7 @@ echo "configure my personal run config ..."
 # back up old config files
 
 CONFIG_FILES=(
+    .clang-format
     .vim
     .zshrc
     .vimrc
