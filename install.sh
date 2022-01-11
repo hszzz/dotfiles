@@ -5,10 +5,14 @@ echo "configure my personal run config ..."
 # back up old config files
 
 CONFIG_FILES=(
+    .vim
     .zshrc
     .vimrc
     .gitconfig
+    .bash_alias
+    .ycm_extra_conf.py
 )
+
 BACKUP_DIR=~/.myrc.bak
 MY_RC_PATH=.myrc
 
