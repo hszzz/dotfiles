@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/hszzz/unix-network/muduo-learning/muduo/base/tests'
+let g:netrw_dirhist_4='/home/hszzz/unix-network/muduo-learning/muduo/base'
+let g:netrw_dirhist_3='/home/hszzz/.myrc'
+let g:netrw_dirhist_2='/home/hszzz/toy-os/usr'
+let g:netrw_dirhist_1='/home/hszzz/sylar/sylar'
