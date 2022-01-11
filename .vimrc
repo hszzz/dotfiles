@@ -1,3 +1,11 @@
+ 
+" install plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 set encoding=utf-8
 let mapleader=','
 
@@ -48,9 +56,9 @@ set scrolloff=3
 
 imap jk <ESC>
 
-nnoremap <leader>sp :split<CR>
-nnoremap <leader>vs :vsplit<CR>
-nnoremap <leader>st :tab split<CR>
+" nnoremap <leader>sp :split<CR>
+" nnoremap <leader>vs :vsplit<CR>
+" nnoremap <leader>st :tab split<CR>
 
 noremap \ ,
 
@@ -64,15 +72,33 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " keybinding end ---------------
 
-
+" airline --------------------------
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='wombat'
 let g:airline_powerline_fonts=1
+
+" ycm ---------------------------------
+let g:ycm_python_binary_path='/usr/bin/python'
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
+let g:ycm_show_diagnostics_ui=1
+
+nnoremap <leader><leader> :YcmCompleter GoTo<CR>
+nnoremap <leader>[ :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>d :YcmCompleter GetDoc<CR>
+nnoremap <leader>r :YcmCompleter RefactorRename<SPACE>
+nnoremap <leader>f :YcmCompleter FixIt<CR>1
+nnoremap <LEADER>y :call ToggleYcmDiagnostics()<CR><CR>:wa<CR>:e<CR>
+func! ToggleYcmDiagnostics()
+    let g:ycm_show_diagnostics_ui = !g:ycm_show_diagnostics_ui
+    YcmRestartServer
+endfunc
+
 
 " plugin begin -----------------------
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-scripts/vim-airline'
+Plug 'ycm-core/YouCompleteMe', {'do': './install.py --clang-completer'}
 
 call plug#end()
 " plugin end -------------------------
