@@ -1,4 +1,6 @@
 alias ls='ls --color=auto'
+alias l='ls --color=auto'
+alias s='ls --color=auto'
 alias ll='ls -shlF'
 
 alias mkdir='mkdir -v'
