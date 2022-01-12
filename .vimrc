@@ -11,6 +11,7 @@ let mapleader=','
 
 syntax on
 
+" tab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=0
@@ -54,7 +55,7 @@ set scrolloff=3
 
 set termguicolors
 
-" keybinding begin -------------
+" keybinding
 imap jk <ESC>
 " nnoremap <leader>sp :split<CR>
 " nnoremap <leader>vs :vsplit<CR>
@@ -71,12 +72,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" airline --------------------------
+" airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='wombat'
 let g:airline_powerline_fonts=1
 
-" ycm ---------------------------------
+" ycm
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 let g:ycm_error_symbol='✗'
 let g:ycm_warning_symbol='⚠'
@@ -106,10 +107,14 @@ endfunc
 " let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 " let g:UltiSnipsEditSplit='vertical'
 
+" scheme: NeoSolarized
 colorscheme NeoSolarized
 set background=dark " dark version
 
-" plugin begin -----------------------
+" formatter
+
+
+" plugin
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-scripts/vim-airline'
@@ -122,5 +127,4 @@ Plug 'Chiel92/vim-autoformat'
 " Plug 'SirVer/ultisnips'
 " Plug 'honza/vim-snippets'
 call plug#end()
-" plugin end -------------------------
 
