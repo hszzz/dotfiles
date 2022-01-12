@@ -52,10 +52,10 @@ set synmaxcol=600
 
 set scrolloff=3
 
+set termguicolors
+
 " keybinding begin -------------
-
 imap jk <ESC>
-
 " nnoremap <leader>sp :split<CR>
 " nnoremap <leader>vs :vsplit<CR>
 " nnoremap <leader>st :tab split<CR>
@@ -70,7 +70,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" keybinding end ---------------
 
 " airline --------------------------
 let g:airline#extensions#tabline#enabled = 1
@@ -78,28 +77,50 @@ let g:airline_theme='wombat'
 let g:airline_powerline_fonts=1
 
 " ycm ---------------------------------
-let g:ycm_python_binary_path='/usr/bin/python'
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
-let g:ycm_show_diagnostics_ui=1
+let g:ycm_error_symbol='✗'
+let g:ycm_warning_symbol='⚠'
+let g:ycm_filetype_whitelist = {"c": 1, "cpp": 1, "python": 1}
+let g:ycm_min_num_of_chars_for_completion = 2
+let g:ycm_show_diagnostics_ui = 1
+let g:ycm_key_invoke_completion = '<c-z>'
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 1
+let g:ycm_show_diagnostics_ui=0
 
 nnoremap <leader><leader> :YcmCompleter GoTo<CR>
 nnoremap <leader>[ :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>d :YcmCompleter GetDoc<CR>
 nnoremap <leader>r :YcmCompleter RefactorRename<SPACE>
 nnoremap <leader>f :YcmCompleter FixIt<CR>1
-nnoremap <LEADER>y :call ToggleYcmDiagnostics()<CR><CR>:wa<CR>:e<CR>
+nnoremap <leader>y :call ToggleYcmDiagnostics()<CR><CR>:wa<CR>:e<CR>
+
 func! ToggleYcmDiagnostics()
     let g:ycm_show_diagnostics_ui = !g:ycm_show_diagnostics_ui
     YcmRestartServer
 endfunc
 
+" ultisnips 
+" let g:UltiSnipsExpandTrigger='<c-s>'
+" let g:UltiSnipsJumpForwardTrigger='<tab>'
+" let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+" let g:UltiSnipsEditSplit='vertical'
+
+colorscheme NeoSolarized
+set background=dark " dark version
 
 " plugin begin -----------------------
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-scripts/vim-airline'
 Plug 'ycm-core/YouCompleteMe', {'do': './install.py --clang-completer'}
+Plug 'preservim/nerdtree'
+Plug 'ilyachur/cmake4vim'
+Plug 'overcache/NeoSolarized' " theme
+Plug 'Chiel92/vim-autoformat'
 
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
 call plug#end()
 " plugin end -------------------------
 
