@@ -1,9 +1,9 @@
- 
-" install plug
+
+" install vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 set encoding=utf-8
@@ -83,11 +83,11 @@ let g:ycm_error_symbol='✗'
 let g:ycm_warning_symbol='⚠'
 let g:ycm_filetype_whitelist = {"c": 1, "cpp": 1, "python": 1}
 let g:ycm_min_num_of_chars_for_completion = 2
-let g:ycm_show_diagnostics_ui = 1
 let g:ycm_key_invoke_completion = '<c-z>'
-let g:ycm_enable_diagnostic_signs = 0
+
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_enable_diagnostic_signs = 1
 let g:ycm_enable_diagnostic_highlighting = 1
-let g:ycm_show_diagnostics_ui=0
 
 nnoremap <leader><leader> :YcmCompleter GoTo<CR>
 nnoremap <leader>[ :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -101,18 +101,30 @@ func! ToggleYcmDiagnostics()
     YcmRestartServer
 endfunc
 
-" ultisnips 
+" ultisnips
 " let g:UltiSnipsExpandTrigger='<c-s>'
 " let g:UltiSnipsJumpForwardTrigger='<tab>'
 " let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 " let g:UltiSnipsEditSplit='vertical'
+
+" cmake4vim
+let g:cmake_build_type = 'Debug'
+let g:cmake_compile_commands = 1
+" let g:cmake_build_path_pattern = ["/tmp/build/%s", "getcwd()"]
+nnoremap <leader>cmst :CMakeSelectTarget<space>
+nnoremap <leader>cmi :CMakeInfo<CR>
+nnoremap <leader>cmrun :CMakeRun<CR>
+nnoremap <leader>cmake :CMake<CR>:CMakeBuild<CR>
+nnoremap <F7> :CMake<CR>:CMakeBuild<CR>
+nnoremap <F8> :CMakeRun<CR>
 
 " scheme: NeoSolarized
 colorscheme NeoSolarized
 set background=dark " dark version
 
 " formatter
-
+noremap <F3> :Autoformat<CR>
+au BufWrite * :Autoformat<CR>
 
 " plugin
 call plug#begin('~/.vim/plugged')
