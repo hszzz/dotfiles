@@ -2,11 +2,15 @@
 
 echo "configure my personal run config ..."
 
+# install oh-my-zsh
+echo "install oh-my-zsh"
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # back up old config files
 
 CONFIG_FILES=(
     .clang-format
-    .vim
+#   .vim
     .zshrc
     .vimrc
     .gitconfig
