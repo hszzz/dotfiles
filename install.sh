@@ -2,9 +2,12 @@
 
 echo "configure my personal run config ..."
 
+# install zsh
+# sudo apt install zsh
+
 # install oh-my-zsh
-echo "install oh-my-zsh"
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# echo "install oh-my-zsh"
+# sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # back up old config files
 
