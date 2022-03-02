@@ -48,3 +48,6 @@ do
     ln -s $MY_RC_PATH/${file} ~/${file}
 done
 
+# copy colors to .vim/colors
+cp vim-colors ~/.vim/colors -r
+
