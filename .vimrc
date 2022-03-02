@@ -55,6 +55,9 @@ set scrolloff=3
 
 set termguicolors
 
+" shutdown beep
+set vb t_vb=
+
 " keybinding
 imap jk <ESC>
 " nnoremap <leader>sp :split<CR>
@@ -124,7 +127,7 @@ set background=dark " dark version
 
 " formatter
 noremap <F3> :Autoformat<CR>
-au BufWrite * :Autoformat<CR>
+" au BufWrite * :Autoformat<CR>
 
 " plugin
 call plug#begin('~/.vim/plugged')
