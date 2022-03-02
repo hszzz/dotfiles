@@ -82,6 +82,8 @@ plugins=(git z sudo
    zsh-autosuggestions
    zsh-syntax-highlighting)
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -119,3 +121,4 @@ cd ~
 if [ -f ~/.bash_alias ]; then
     . ~/.bash_alias
 fi
+
