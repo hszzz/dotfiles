@@ -70,6 +70,7 @@ for s:i in range(1, 9)
     execute 'nnoremap <leader>' . s:i . ' ' . s:i . 'gt'
 endfor
 
+" tab
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
