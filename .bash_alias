@@ -3,12 +3,11 @@ alias sl='ls --color=auto'
 alias l='ls --color=auto'
 alias s='ls --color=auto'
 alias ll='ls -shlF'
+alias lls='ls --color=auto'
 
 alias mkdir='mkdir -v'
 alias mv='mv -v'
 alias cp='cp -v'
 alias rm='rm -v'
 alias ln='ln -v'
-
-
 
