@@ -126,8 +126,10 @@ colorscheme NeoSolarized
 set background=dark " dark version
 
 " formatter
+" sudo apt install clang-format
+autocmd FileType c,cpp setlocal equalprg=clang-format " gg=G use clang-format
 noremap <F3> :Autoformat<CR>
-" au BufWrite * :Autoformat<CR>
+au BufWrite * :Autoformat<CR>
 
 " plugin
 call plug#begin('~/.vim/plugged')
