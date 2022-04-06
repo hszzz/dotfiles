@@ -81,12 +81,12 @@ HIST_STAMPS="yyyy-mm-dd"
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 plugins=(git z sudo
-   zsh-autosuggestions
-   zsh-syntax-highlighting)
+    zsh-autosuggestions
+    zsh-syntax-highlighting)
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
 
-source $ZSH/oh-my-zsh.sh
+    source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -114,7 +114,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-DEFAULT_USER="hszzz"
+# DEFAULT_USER="hszzz"
+if [ -f ~/.bash_alias ]; then
+    . ~/.zshrc_default_user
+fi
 
 # change dir to home (wsl ubuntu)
 cd ~

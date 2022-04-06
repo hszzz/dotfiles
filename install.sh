@@ -13,19 +13,20 @@ echo "configure my personal run config ..."
 
 CONFIG_FILES=(
     .clang-format
-#   .vim
+    #   .vim
     .zshrc
     .vimrc
     .gitconfig
     .bash_alias
     .ycm_extra_conf.py
+    .zshrc_default_user
 )
 
 BACKUP_DIR=~/.myrc.bak
 MY_RC_PATH=.myrc
 
 if [ -d ${BACKUP_DIR} ]
-then 
+then
     echo "backup dir already exists!"
 else
     echo "create backup dir"
