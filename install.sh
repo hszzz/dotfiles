@@ -135,4 +135,3 @@ install_universal_ctags
 install_config
 
 echo "-- Complete !!!"
-source ~/.zshrc
