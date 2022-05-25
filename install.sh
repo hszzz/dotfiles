@@ -13,8 +13,6 @@ CONFIG_FILES=(
     .vimrc
     .gitconfig
     .bash_alias
-    .ycm_extra_conf.py
-    .zshrc_default_user
 )
 
 BACKUP_DIR=~/.myrc.bak
@@ -122,6 +120,7 @@ install_oh_my_zsh() {
 }
 
 install_omz_plugins() {
+    rm ~/.oh-my-zsh/custom/plugins/* -rf
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 }
