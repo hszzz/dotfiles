@@ -113,8 +113,10 @@ install_config() {
 }
 
 install_oh_my_zsh() {
-    echo "-- install oh-my-zsh"
-    sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    if ! while omz; then
+        echo "-- install oh-my-zsh"
+        sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    fi
 }
 
 install_omz_plugins() {
