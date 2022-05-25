@@ -47,9 +47,9 @@ for x in coc-ccls coc-pyright coc-git coc-json; do
     echo "-- Installing coc plugin '\$x', please wait..."
     echo -e '\\n\\nZZZZ\\n\\n' | "$VIMEXE" -c "set mouse= | echo 'installing \$x, please wait...' | CocInstall -sync \$x | echo 'done' | quit"
 done
-# mkdir -p ~/.config/coc/extensions/node_modules/coc-ccls
-# ln -sf node_modules/ws/lib ~/.config/coc/extensions/node_modules/coc-ccls/lib
-# echo '-- coc plugins installed successfully'
+mkdir -p ~/.config/coc/extensions/node_modules/coc-ccls
+ln -sf node_modules/ws/lib ~/.config/coc/extensions/node_modules/coc-ccls/lib
+echo '-- coc plugins installed successfully'
 popd
 EOF
 }
