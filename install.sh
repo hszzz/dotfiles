@@ -102,10 +102,9 @@ install_config() {
         ln -s $MY_RC_PATH/${file} ~/${file}
     done
 
-    " support nvim
+    # support nvim
     if which nvim; then
         if [ -d ~/.vim ]; then
-            echo "-- backup existing nvim to ~/.config/nvim.backup.$$"
             mv ~/.config/nvim ${BACKUP_DIR}
         fi
         echo "-- creating symbolic link to ~/.config/nvim"
