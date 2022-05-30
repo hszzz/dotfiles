@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # install Powerline Fonts first
-ZSH_THEME="agnoster"
+ZSH_THEME="ys"
 
 DISABLE_AUTO_TITLE="true"
 HIST_STAMPS="yyyy-mm-dd"
