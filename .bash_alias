@@ -11,3 +11,7 @@ alias cp='cp -v'
 alias rm='rm -v'
 alias ln='ln -v'
 
+# vim
+alias vi=nvim
+alias vim=nvim
+
