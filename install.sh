@@ -37,14 +37,14 @@ install_config() {
 }
 
 install_neovim() {
-  if [ ! which nvim ]; then
-    cd ~
-    git clone https://github.com/neovim/neovim
-    cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
-    sudo make install
-    cd -
-    echo "-- neovim is installed."
-  fi
+  hash go 2> /dev/null || {
+    cd ~;
+    git clone https://github.com/neovim/neovim;
+    cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo;
+    sudo make install;
+    cd -;
+    echo "-- neovim is installed.";
+  }
 
   if [ -d ~/.config/nvim ]; then
     echo "-- ${file} already exists, move to backup dir."
