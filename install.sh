@@ -37,7 +37,7 @@ install_config() {
 }
 
 install_neovim() {
-  hash go 2> /dev/null || {
+  hash nvim 2> /dev/null || {
     cd ~;
     git clone https://github.com/neovim/neovim;
     cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo;
