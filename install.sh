@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-echo "-- configure my personal run config ..."
+echo "-- configure my personal run config"
 
 # back up old config files
 CONFIG_FILES=(
@@ -42,7 +42,7 @@ install_neovim() {
     git clone https://github.com/neovim/neovim
     cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
     sudo make install
-    cd ~
+    cd -
     echo "-- neovim is installed."
   fi
 
@@ -61,7 +61,7 @@ install_oh_my_zsh() {
     echo "-- install oh-my-zsh"
     sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   fi
-  cd ~
+  cd -
 }
 
 install_omz_plugins() {
