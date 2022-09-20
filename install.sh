@@ -52,7 +52,7 @@ install_neovim() {
   fi
 
   echo "-- creating symbolic link to ~/.config/nvim"
-  ln -sf nvim ~/.config/nvim
+  ln -sf `pwd`"/nvim" ~/.config/nvim
 }
 
 install_oh_my_zsh() {
