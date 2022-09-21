@@ -1,14 +1,15 @@
 [user]
-	name = hszzz
-	email = hszzz.me@gmail.com
-[core]
-	editor = vim
-[alias]
-	co = checkout
-	br = branch
-	cmt = commit -m
-	st = status
-    pu = push
-    pl = pull
-	adog = log --all --decorate --oneline --graph
+  name = hszzz
+  email = hszzz.me@gmail.com
 
+[core]
+  editor = vim
+
+[alias]
+  co   = checkout
+  br   = branch
+  cmt  = commit -m
+  st   = status
+  pu   = push
+  pl   = pull
+  adog = log --all --decorate --oneline --graph
