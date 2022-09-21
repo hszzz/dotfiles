@@ -4,11 +4,15 @@ return require('packer').startup(function()
 
   -- theme
   use {
-    "ellisonleao/gruvbox.nvim",
-    requires = {"rktjmp/lush.nvim"}
+    'ellisonleao/gruvbox.nvim',
+    requires = { 'rktjmp/lush.nvim' }
   }
+  use 'folke/tokyonight.nvim'
+  use 'mhartington/oceanic-next'
+  use 'shaunsingh/nord.nvim'
+  use 'ful1e5/onedark.nvim'
 
-  -- tree
+  -- file explored
   use {
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons'
@@ -25,5 +29,19 @@ return require('packer').startup(function()
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+
+  -- status line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' } 
+  }
+  use 'arkav/lualine-lsp-progress'
+
+  -- search
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
+  use "LinArcX/telescope-env.nvim"
 end)
 

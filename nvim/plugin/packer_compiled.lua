@@ -84,10 +84,25 @@ _G.packer_plugins = {
     path = "/home/shih/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
+  ["lualine-lsp-progress"] = {
+    loaded = true,
+    path = "/home/shih/.local/share/nvim/site/pack/packer/start/lualine-lsp-progress",
+    url = "https://github.com/arkav/lualine-lsp-progress"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/shih/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["lush.nvim"] = {
     loaded = true,
     path = "/home/shih/.local/share/nvim/site/pack/packer/start/lush.nvim",
     url = "https://github.com/rktjmp/lush.nvim"
+  },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/home/shih/.local/share/nvim/site/pack/packer/start/nord.nvim",
+    url = "https://github.com/shaunsingh/nord.nvim"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -104,10 +119,40 @@ _G.packer_plugins = {
     path = "/home/shih/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["oceanic-next"] = {
+    loaded = true,
+    path = "/home/shih/.local/share/nvim/site/pack/packer/start/oceanic-next",
+    url = "https://github.com/mhartington/oceanic-next"
+  },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/home/shih/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/ful1e5/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/shih/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/shih/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope-env.nvim"] = {
+    loaded = true,
+    path = "/home/shih/.local/share/nvim/site/pack/packer/start/telescope-env.nvim",
+    url = "https://github.com/LinArcX/telescope-env.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/shih/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/shih/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   }
 }
 
