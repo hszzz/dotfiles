@@ -10,5 +10,10 @@ lua require('plugins-config/nvim-treesitter')
 lua require('plugins-config/lualine')
 lua require('plugins-config/telescope')
 
+lua require('lsp/setup')
+lua require('lsp/cmp')
+lua require('lsp/ui')
+lua require('lsp.null-ls')
+
 set background=dark
 
