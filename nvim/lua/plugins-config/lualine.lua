@@ -24,7 +24,7 @@ lualine.setup({
     },
 
     lualine_x = {
-      "filesize",
+      -- "filesize",
       {
         "fileformat",
 

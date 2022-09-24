@@ -194,6 +194,11 @@ _G.packer_plugins = {
     path = "/home/shih/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/home/shih/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+  },
   ["telescope-env.nvim"] = {
     loaded = true,
     path = "/home/shih/.local/share/nvim/site/pack/packer/start/telescope-env.nvim",

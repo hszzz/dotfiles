@@ -48,6 +48,9 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
 
+  -- dashboard
+  -- use("glepnir/dashboard-nvim")
+
   -- 补全引擎
   use 'hrsh7th/nvim-cmp'
   -- snippet 引擎
@@ -70,5 +73,9 @@ return require('packer').startup(function()
     "jose-elias-alvarez/null-ls.nvim",
     requires = "nvim-lua/plenary.nvim"
   }
+
+  -- rust
+  use("simrat39/rust-tools.nvim")
+
 end)
 
