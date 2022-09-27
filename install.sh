@@ -26,6 +26,11 @@ install_config() {
 
   for file in ${CONFIG_FILES[@]}
   do
+    if [ -L ~/${file} ]; then
+      echo " -- remove soft link: ${file}."
+      rm -rf ~/${file}
+    fi
+
     if [ -f ~/${file} ]; then
       echo " -- ${file} already exists, move to backup dir."
       mv ~/${file} ${BACKUP_DIR}
