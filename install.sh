@@ -26,7 +26,7 @@ install_config() {
 
   for file in ${CONFIG_FILES[@]}
   do
-    if [ -L ~/${file} ]; then
+    if [ -h ~/${file} ]; then
       echo " -- remove soft link: ${file}."
       rm -rf ~/${file}
     fi
