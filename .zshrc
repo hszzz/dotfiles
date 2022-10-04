@@ -5,7 +5,7 @@ ZSH_THEME="ys"
 export UPDATE_ZSH_DAYS=13
 DISABLE_AUTO_TITLE="true"
 HIST_STAMPS="yyyy-mm-dd"
-DEFAULT_USER="laixintao"
+DEFAULT_USER="shih"
 
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
@@ -36,6 +36,7 @@ if uname -r |grep -i -q 'WSL2' ; then
   export http_proxy="http://${hostip}:7890";
   echo "[WSL2]: set http proxy: $http_proxy";
 else
-  export https_proxy="https://127.0.0.1:7890";
-  export http_proxy="http://127.0.0.1:7890";
+  export https_proxy=http://127.0.0.1:7890 \
+    http_proxy=http://127.0.0.1:7890       \ 
+    all_proxy=socks5://127.0.0.1:7890
 fi
