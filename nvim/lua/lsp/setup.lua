@@ -1,22 +1,42 @@
-require("nvim-lsp-installer").setup({
-  automatic_installation = true;
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗",
+        },
+    },
+})
+
+require("mason-lspconfig").setup({
+    ensure_installed = {
+        "sumneko_lua",
+        "bashls",
+        "html",
+        "pyright",
+        "rust_analyzer",
+        "clangd",
+    },
 })
 
 local lspconfig = require("lspconfig")
 
--- 安装列表
--- { key: 语言 value: 配置文件 }
--- key 必须为下列网址列出的名称
--- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 local servers = {
-  sumneko_lua = require("lsp.config.lua"), -- lua/lsp/config/lua.lua
-  bashls = require("lsp.config.bash"),
+    sumneko_lua = require("lsp.config.lua"),
+    -- bashls = require("lsp.config.bash"),
+    -- pyright = require("lsp.config.pyright"),
+    -- html = require("lsp.config.html"),
+    -- yamlls = require("lsp.config.yamlls"),
+    -- rust_analyzer = require("lsp.config.rust"),
+    -- taplo = require("lsp.config.taplo"),
+    -- gopls = require("lsp.config.gopls"),
 }
 
 for name, config in pairs(servers) do
-  if config ~= nil and type(config) == "table" then
-    config.on_setup(lspconfig[name])
-  else
-    lspconfig[name].setup({})
-  end
+    if config ~= nil and type(config) == "table" then
+        config.on_setup(lspconfig[name])
+    else
+        lspconfig[name].setup({})
+    end
 end
+
