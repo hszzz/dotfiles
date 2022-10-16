@@ -13,7 +13,8 @@ local servers = {
   bashls = require("lsp.config.bash"),
   clangd = require("lsp.config.clangd"),
   pyright = require("lsp.config.pyright"),
-  rust_analyzer = require("lsp.config.rust")
+  rust_analyzer = require("lsp.config.rust"),
+  cmake = require("lsp.config.cmake")
 }
 
 for name, config in pairs(servers) do
