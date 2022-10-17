@@ -1,15 +1,15 @@
 #!/bin/bash
 
+colorflag="--color"
+
 if [ "$(uname)"=="Darwin" ];then
-  alias ls='ls -G'
-else
-  alias ls='ls --color=auto'
+  colorflag="-G"
 fi
 
-alias sl='ls'
-alias l='ls'
-alias s='ls'
-alias ll='ls -shlF'
+alias sl='ls ${colorflag}'
+alias l='ls ${colorflag}'
+alias s='ls ${colorflag}'
+alias ll='ls -shlF ${colorflag}'
 
 alias mkdir='mkdir -v'
 alias mv='mv -v'
@@ -20,4 +20,27 @@ alias ln='ln -v'
 # vim
 alias vi=nvim
 alias vim=nvim
+
+# extract
+ex () {
+	if [ -f $1 ] ; then
+		case $1 in
+			*.tar.bz2)   tar vxjf $1   ;;
+			*.tar.gz)    tar vxzf $1   ;;
+			*.tar.xz)    tar vxf $1   ;;
+			*.bz2)       bunzip2 $1   ;;
+			*.rar)       rar x $1     ;;
+			*.gz)        gunzip $1    ;;
+			*.tar)       tar vxf $1    ;;
+			*.tbz2)      tar vxjf $1   ;;
+			*.tgz)       tar vxzf $1   ;;
+			*.zip)       unzip $1     ;;
+			*.Z)         uncompress $1  ;;
+			*.7z)        7z x $1    ;;
+			*)           echo "'$1' cannot be extracted via extract()" ;;
+		esac
+	else
+		echo "'$1' is not a valid file"
+	fi
+}
 
