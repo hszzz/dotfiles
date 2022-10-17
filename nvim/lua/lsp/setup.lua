@@ -22,20 +22,12 @@ require("mason-lspconfig").setup({
 local lspconfig = require("lspconfig")
 
 local servers = {
-<<<<<<< HEAD
-  sumneko_lua = require("lsp.config.lua"), -- lua/lsp/config/lua.lua
-  bashls = require("lsp.config.bash"),
-  clangd = require("lsp.config.clangd"),
-  pyright = require("lsp.config.pyright"),
-  rust_analyzer = require("lsp.config.rust")
-=======
     sumneko_lua = require("lsp.config.lua"),
     bashls = require("lsp.config.bash"),
     pyright = require("lsp.config.pyright"),
     rust_analyzer = require("lsp.config.rust"),
     clangd = require("lsp.config.clangd"),
     gopls = require("lsp.config.gopls"),
->>>>>>> v1
 }
 
 for name, config in pairs(servers) do

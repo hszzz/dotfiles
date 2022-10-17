@@ -11,17 +11,6 @@ lualine.setup({
         section_separators = { left = "", right = "" },
     },
 
-<<<<<<< HEAD
-    lualine_x = {
-      -- "filesize",
-      {
-        "fileformat",
-
-        symbols = {
-          unix = "LF",
-          dos = "CRLF",
-          mac = "CR",
-=======
     extensions = { "nvim-tree", "toggleterm" },
     sections = {
         lualine_c = {
@@ -44,7 +33,6 @@ lualine.setup({
             },
             "encoding",
             "filetype",
->>>>>>> v1
         },
     },
 })

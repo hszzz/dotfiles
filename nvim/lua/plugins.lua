@@ -41,24 +41,8 @@ packer.startup({
         -- file explore
         use({ 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' })
 
-<<<<<<< HEAD
-  -- dashboard
-  -- use("glepnir/dashboard-nvim")
-
-  -- 补全引擎
-  use 'hrsh7th/nvim-cmp'
-  -- snippet 引擎
-  use 'hrsh7th/vim-vsnip'
-  -- 补全源
-  use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/cmp-nvim-lsp' -- { name = nvim_lsp }
-  use 'hrsh7th/cmp-buffer' -- { name = 'buffer' },
-  use 'hrsh7th/cmp-path' -- { name = 'path' }
-  use 'hrsh7th/cmp-cmdline' -- { name = 'cmdline' }
-=======
         -- bufferline
         use({ 'akinsho/bufferline.nvim', requires = { 'kyazdani42/nvim-web-devicons', 'moll/vim-bbye' }})
->>>>>>> v1
 
         -- lueline
         use({ 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons' } })
@@ -67,21 +51,8 @@ packer.startup({
         -- telescope
         use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
 
-<<<<<<< HEAD
-  -- format
-  use {
-    "jose-elias-alvarez/null-ls.nvim",
-    requires = "nvim-lua/plenary.nvim"
-  }
-
-  -- rust
-  use("simrat39/rust-tools.nvim")
-
-end)
-=======
         -- treesitter
         use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
->>>>>>> v1
 
         -- lsp
         use('williamboman/mason.nvim')
