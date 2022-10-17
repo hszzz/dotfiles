@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lsp-signature-help"] = {
+    loaded = true,
+    path = "/Users/shih/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/cmp-path",
@@ -104,16 +109,24 @@ _G.packer_plugins = {
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/Users/shih/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+<<<<<<< HEAD
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
+=======
+>>>>>>> v1
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -129,10 +142,30 @@ _G.packer_plugins = {
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["lush.nvim"] = {
+  ["mason-lspconfig.nvim"] = {
     loaded = true,
+<<<<<<< HEAD
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/lush.nvim",
     url = "https://github.com/rktjmp/lush.nvim"
+=======
+    path = "/Users/shih/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/Users/shih/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neodev.nvim"] = {
+    loaded = true,
+    path = "/Users/shih/.local/share/nvim/site/pack/packer/start/neodev.nvim",
+    url = "https://github.com/folke/neodev.nvim"
+  },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/Users/shih/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+>>>>>>> v1
   },
   ["nord.nvim"] = {
     loaded = true,
@@ -149,11 +182,14 @@ _G.packer_plugins = {
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+<<<<<<< HEAD
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
     url = "https://github.com/williamboman/nvim-lsp-installer"
   },
+=======
+>>>>>>> v1
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -195,6 +231,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["rust-tools.nvim"] = {
+<<<<<<< HEAD
     loaded = true,
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
@@ -203,6 +240,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/telescope-env.nvim",
     url = "https://github.com/LinArcX/telescope-env.nvim"
+=======
+    loaded = true,
+    path = "/Users/shih/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+>>>>>>> v1
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -213,6 +255,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/shih/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-bbye"] = {
+    loaded = true,
+    path = "/Users/shih/.local/share/nvim/site/pack/packer/start/vim-bbye",
+    url = "https://github.com/moll/vim-bbye"
   },
   ["vim-vsnip"] = {
     loaded = true,

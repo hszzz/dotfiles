@@ -43,4 +43,7 @@ ex () {
 		echo "'$1' is not a valid file"
 	fi
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> v1
