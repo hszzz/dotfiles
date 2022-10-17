@@ -58,8 +58,8 @@ packer.startup({
         use('williamboman/mason.nvim')
         use('williamboman/mason-lspconfig.nvim')
         use('neovim/nvim-lspconfig')
-        use('hrsh7th/nvim-cmp')
 
+        use('hrsh7th/nvim-cmp')
         use('hrsh7th/cmp-vsnip')
         use('hrsh7th/cmp-nvim-lsp')
         use('hrsh7th/cmp-buffer')
@@ -67,8 +67,15 @@ packer.startup({
         use('hrsh7th/cmp-cmdline')
         use('hrsh7th/cmp-nvim-lsp-signature-help')
 
+        use('onsails/lspkind-nvim')
+
+        use('rafamadriz/friendly-snippets')
+
         -- lua
         use('folke/neodev.nvim')
+
+        -- rust
+        use("simrat39/rust-tools.nvim")
 
         if packer_bootstrap then
             packer.sync()

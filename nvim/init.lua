@@ -11,4 +11,5 @@ require('plugins-config.telescope')
 require('plugins-config.nvim-treesitter')
 
 require('lsp.setup')
+require('lsp.cmp')
 
