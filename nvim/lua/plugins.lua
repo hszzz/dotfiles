@@ -69,6 +69,11 @@ packer.startup({
 
         use('onsails/lspkind-nvim')
 
+        use('mhartington/formatter.nvim')
+        use({ 'jose-elias-alvarez/null-ls.nvim', requires = 'nvim-lua/plenary.nvim' })
+
+        -- snippets
+        use('hrsh7th/vim-vsnip')
         use('rafamadriz/friendly-snippets')
 
         -- lua

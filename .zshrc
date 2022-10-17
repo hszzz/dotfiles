@@ -28,6 +28,10 @@ if uname -r |grep -i -q 'WSL2' ; then
   export hostip=$(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*');
   export https_proxy="http://${hostip}:7890";
   export http_proxy="http://${hostip}:7890";
-
   echo "[WSL2]: set http proxy: $http_proxy";
+else
+  export https_proxy=http://127.0.0.1:7890;
+  export http_proxy=http://127.0.0.1:7890; 
+  export all_proxy=socks5://127.0.0.1:7890;
 fi
+

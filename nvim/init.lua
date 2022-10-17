@@ -1,5 +1,6 @@
 require('core.basics')
 require('core.keybindings')
+require('core.autocmds')
 
 require('plugins')
 require('core.colorscheme')
@@ -12,4 +13,5 @@ require('plugins-config.nvim-treesitter')
 
 require('lsp.setup')
 require('lsp.cmp')
+require('lsp.null-ls')
 
