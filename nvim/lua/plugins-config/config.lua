@@ -1,6 +1,0 @@
-require('plugins-config.nvim-tree')
-require('plugins-config.bufferline')
-require('plugins-config.nvim-treesitter')
-require('plugins-config.lualine')
-require('plugins-config.telescope')
--- require('dashboard')
