@@ -10,6 +10,7 @@ require("plugins-config.bufferline")
 require("plugins-config.lualine")
 require("plugins-config.telescope")
 require("plugins-config.nvim-treesitter")
+require("plugins-config.toggleterm")
 
 require("lsp.setup")
 require("lsp.cmp")
