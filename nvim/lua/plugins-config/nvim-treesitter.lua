@@ -1,36 +1,33 @@
-require'nvim-treesitter.configs'.setup {
-  -- :TSInstallInfo 命令查看支持的语言
-  ensure_installed = {
-    "vim", "lua", "c", 
-    "cpp", "go", "rust"
-  },
+local status, treesitter = pcall(require, "nvim-treesitter.configs")
+if not status then
+    vim.notify("没有找到 nvim-treesitter")
+    return
+end
 
-  -- 启用代码高亮功能
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false
-  },
+treesitter.setup({
+    ensure_installed = { "html", "vim", "lua", 
+    "c", "cpp", "go", "rust", "cmake", "bash", "python"},
 
-  -- 启用增量选择
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection    = '<CR>',
-      node_incremental  = '<CR>',
-      node_decremental  = '<BS>',
-      scope_incremental = '<TAB>',
-    }
-  },
+    highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+    },
 
-  -- 启用基于Treesitter的代码格式化(=) . 
-  indent = {
-    enable = true
-  }
-}
+    incremental_selection = {
+        enable = true,
+        keymaps = {
+            init_selection = "<CR>",
+            node_incremental = "<CR>",
+            node_decremental = "<BS>",
+            scope_incremental = "<TAB>",
+        },
+    },
 
--- 开启 Folding
-vim.wo.foldmethod = 'expr'
-vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+    indent = {
+        enable = true,
+    },
+})
 
--- 默认不要折叠
-vim.wo.foldlevel = 99
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 99

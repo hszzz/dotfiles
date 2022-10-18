@@ -13,3 +13,20 @@ autocmd("BufWritePost", {
     end
   end,
 })
+
+autocmd("BufWritePre", {
+  group = nvimAutoGroup,
+  -- pattern = { "*.lua", "*.py", "*.sh", "*.c", "*.cc", "*.cpp", "*.h" },
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+})
+
+autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = nvimAutoGroup,
+  pattern = "*",
+})
+
