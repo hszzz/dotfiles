@@ -26,16 +26,16 @@ autocmd("BufWritePost", {
 
 autocmd("BufWritePre", {
 	group = nvimAutoGroup,
-	pattern = { "*.lua", "*.py", "*.sh", "*.c", "*.cc", "*.cpp", "*.h" },
+	pattern = { "*.lua", "*.py", "*.sh", "*.c", "*.cc", "*.cpp", "*.h", "*.go" },
 	callback = function()
 		vim.lsp.buf.format()
 	end,
 })
 
 autocmd("TextYankPost", {
+	group = nvimAutoGroup,
+	pattern = "*",
 	callback = function()
 		vim.highlight.on_yank()
 	end,
-	group = nvimAutoGroup,
-	pattern = "*",
 })

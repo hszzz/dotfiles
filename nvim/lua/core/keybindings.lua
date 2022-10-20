@@ -19,7 +19,7 @@ map("n", "<A-j>", "<C-w>j", opt)
 map("n", "<A-k>", "<C-w>k", opt)
 map("n", "<A-l>", "<C-w>l", opt)
 
-map("n", "Q", ":qa<CR>", opt)
+map("n", "Q", ":wqa<CR>", opt)
 
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 

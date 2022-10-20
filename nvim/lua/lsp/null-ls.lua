@@ -16,6 +16,7 @@ null_ls.setup({
 		formatting.rustfmt,
 		formatting.clang_format,
 		formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.goimports,
 
 		code_actions.gitsigns,
 	},
