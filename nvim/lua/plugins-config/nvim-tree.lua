@@ -8,9 +8,8 @@ end
 local list_keys = require("core.keybindings").nvimTreeList
 
 nvim_tree.setup({
-	-- 不显示 git 状态图标
 	git = {
-		enable = true,
+		enable = false,
 	},
 
 	-- project plugin 需要这样设置
@@ -26,9 +25,9 @@ nvim_tree.setup({
 	},
 
 	view = {
-		width = 40,
+		width = 36,
 		side = "left",
-		hide_root_folder = false,
+		hide_root_folder = true,
 
 		mappings = {
 			custom_only = false,
@@ -40,6 +39,7 @@ nvim_tree.setup({
 
 		signcolumn = "yes",
 	},
+
 	actions = {
 		open_file = {
 			resize_window = true,
