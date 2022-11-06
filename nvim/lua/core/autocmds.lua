@@ -39,3 +39,23 @@ autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+
+autocmd("FileType", {
+	group = nvimAutoGroup,
+	pattern = { "make" },
+	callback = function()
+		vim.o.expandtab = false
+		vim.bo.expandtab = false
+	end,
+})
+
+autocmd("FileType", {
+	group = nvimAutoGroup,
+	pattern = { "cpp", "html", "yaml", "json", "css", "xml" },
+	callback = function()
+		vim.o.tabstop = 2
+		vim.bo.tabstop = 2
+		vim.o.shiftwidth = 2
+		vim.bo.shiftwidth = 2
+	end,
+})
