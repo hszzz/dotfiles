@@ -32,7 +32,7 @@ vim.o.smartcase = true
 vim.o.hlsearch = true
 vim.o.incsearch = true
 
-vim.o.cmdheight = 2
+vim.o.cmdheight = 0
 
 vim.o.autoread = true
 vim.bo.autoread = true
