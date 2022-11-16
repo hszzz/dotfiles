@@ -21,7 +21,7 @@ nvim_tree.setup({
 
 	filters = {
 		dotfiles = false,
-		custom = { "node_modules" },
+		custom = { ".git", ".cache" },
 	},
 
 	view = {
