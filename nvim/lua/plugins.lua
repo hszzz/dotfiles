@@ -32,11 +32,13 @@ packer.startup({
 		use("wbthomason/packer.nvim")
 
 		-- colorscheme
-		use("folke/tokyonight.nvim")
-		use("mhartington/oceanic-next")
-		use("shaunsingh/nord.nvim")
-		use("ful1e5/onedark.nvim")
-		use("EdenEast/nightfox.nvim")
+		-- use("folke/tokyonight.nvim")
+		-- use("mhartington/oceanic-next")
+		-- use("shaunsingh/nord.nvim")
+		-- use("ful1e5/onedark.nvim")
+		-- use("EdenEast/nightfox.nvim")
+		use({ "glepnir/zephyr-nvim", requires = { "nvim-treesitter/nvim-treesitter", opt = true } })
+		-- use { "ellisonleao/gruvbox.nvim" }
 
 		-- file explore
 		use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
@@ -84,6 +86,17 @@ packer.startup({
 
 		-- toggleterm
 		use("akinsho/toggleterm.nvim")
+
+		use({
+			"jedrzejboczar/toggletasks.nvim",
+			requires = {
+				"nvim-lua/plenary.nvim",
+				"akinsho/toggleterm.nvim",
+				"nvim-telescope/telescope.nvim/",
+			},
+			-- To enable YAML config support
+			rocks = "lyaml",
+		})
 
 		if packer_bootstrap then
 			packer.sync()
