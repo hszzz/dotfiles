@@ -21,8 +21,6 @@ map("n", "<A-l>", "<C-w>l", opt)
 
 map("n", "Q", ":wqa<CR>", opt)
 
-map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
-
 local pluginKeysMapping = {}
 
 -- nvim-tree
