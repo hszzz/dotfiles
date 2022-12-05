@@ -19,30 +19,41 @@ map("n", "<A-j>", "<C-w>j", opt)
 map("n", "<A-k>", "<C-w>k", opt)
 map("n", "<A-l>", "<C-w>l", opt)
 
+map("n", "q", ":q<CR>", opt)
 map("n", "Q", ":wqa<CR>", opt)
-
-local pluginKeysMapping = {}
 
 -- nvim-tree
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 map("n", "<leader>m", ":NvimTreeToggle<CR>", opt)
 
-pluginKeysMapping.nvimTreeList = { -- 打开文件或文件夹
+-- bufferline
+map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<C-x>", ":Bdelete!<CR>", opt)
+
+-- telescope
+map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+
+-- anytasks
+map("n", "<F5>", ":AsyncTasks project-build project-run<CR>", opt)
+map("n", "<F6>", ":AsyncTasks project-build<CR>", opt)
+map("n", "<F7>", ":AsyncTasks file-build file-run<CR>", opt)
+
+local pluginKeysMapping = {}
+
+pluginKeysMapping.nvimTreeList = {
 	{ key = { "o", "<2-LeftMouse>" }, action = "edit" },
 	{ key = "<CR>", action = "system_open" },
 
-	-- 分屏打开文件
 	{ key = "v", action = "vsplit" },
 	{ key = "h", action = "split" },
 
-	-- Ignore (node_modules)
 	{ key = "i", action = "toggle_ignored" },
 
-	-- Hide (dotfiles)
 	{ key = ".", action = "toggle_dotfiles" },
 	{ key = "R", action = "refresh" },
 
-	-- 文件操作
 	{ key = "a", action = "create" },
 	{ key = "d", action = "remove" },
 	{ key = "r", action = "rename" },
@@ -55,19 +66,9 @@ pluginKeysMapping.nvimTreeList = { -- 打开文件或文件夹
 	{ key = "I", action = "toggle_file_info" },
 	{ key = "n", action = "tabnew" },
 
-	-- 目录
 	{ key = { "]" }, action = "cd" },
 	{ key = { "[" }, action = "dir_up" },
 }
-
--- bufferline
-map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
-map("n", "<C-w>", ":Bdelete!<CR>", opt)
-
--- telescope
-map("n", "<C-p>", ":Telescope find_files<CR>", opt)
-map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 
 pluginKeysMapping.telescopeList = {
 	i = {
@@ -90,19 +91,24 @@ pluginKeysMapping.telescopeList = {
 pluginKeysMapping.mapLSP = function(mapbuf)
 	-- rename
 	mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
+
 	-- code action
 	mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+
 	-- go xx
 	mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
 	mapbuf("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
 	mapbuf("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
 	mapbuf("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
 	mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
+
 	-- diagnostic
 	mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
 	mapbuf("n", "gk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
 	mapbuf("n", "gj", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
-	mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
+
+	-- formatting
+	mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.format { async = true; }<CR>", opt)
 end
 
 -- nvim-cmp
