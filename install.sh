@@ -9,6 +9,7 @@ CONFIG_FILES=(
 	.zshrc
 	.gitconfig
 	.bash_alias
+	.tmux.conf
 )
 
 BACKUP_DIR=~/.myrc.bak
@@ -24,25 +25,16 @@ install_config() {
 		mkdir ${BACKUP_DIR}
 	fi
 
-<<<<<<< HEAD
-  for file in ${CONFIG_FILES[@]}
-  do
-    if [ -h ~/${file} ]; then
-      echo " -- remove soft link: ${file}."
-      rm -rf ~/${file}
-    fi
-
-    if [ -f ~/${file} ]; then
-      echo " -- ${file} already exists, move to backup dir."
-      mv ~/${file} ${BACKUP_DIR}
-    fi
-=======
 	for file in ${CONFIG_FILES[@]}; do
 		if [ -h ~/${file} ]; then
 			echo " -- remove soft link: ${file}."
 			rm -rf ~/${file}
 		fi
->>>>>>> v1
+
+		if [ -f ~/${file} ]; then
+			echo " -- ${file} already exists, move to backup dir."
+			mv ~/${file} ${BACKUP_DIR}
+		fi
 
 		if [ -f ~/${file} ]; then
 			echo " -- ${file} already exists, move to backup dir."
@@ -83,9 +75,9 @@ install_oh_my_zsh() {
 }
 
 install_omz_plugins() {
-  rm -rf ~/.oh-my-zsh/custom/plugins/* 
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+	rm -rf ~/.oh-my-zsh/custom/plugins/*
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 }
 
 install_oh_my_zsh
