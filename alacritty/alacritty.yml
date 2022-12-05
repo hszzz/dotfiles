@@ -2,6 +2,13 @@ import:
   - ~/.config/alacritty/font.yml
   - ~/.config/alacritty/color.yml
 
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - 'tmux new-session -A -D -s main'
+
 env:
   TERM: xterm-256color
 
@@ -9,8 +16,8 @@ live_config_reload: true
 
 window:
   dimensions:
-    columns: 100
-    lines: 30
+    columns: 136
+    lines: 36
 
   padding:
     x: 0
