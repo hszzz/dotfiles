@@ -10,6 +10,12 @@ alias sl='ls ${colorflag}'
 alias l='ls ${colorflag}'
 alias s='ls ${colorflag}'
 alias ll='ls -shlF ${colorflag}'
+alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+
+alias ..='cd ..'
+alias ...='cd ../../'
+alias -- -='cd -'
+alias ~='cd ~'
 
 alias mkdir='mkdir -v'
 alias mv='mv -v'
@@ -17,9 +23,23 @@ alias cp='cp -v'
 alias rm='rm -v'
 alias ln='ln -v'
 
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
 # vim
-alias vi=nvim
 alias vim=nvim
+
+# ip
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
 
 # extract
 ex() {
