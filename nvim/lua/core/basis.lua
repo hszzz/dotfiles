@@ -8,18 +8,17 @@ vim.o.number = true
 
 vim.wo.cursorline = true
 vim.wo.signcolumn = "number"
--- vim.wo.colorcolumn = "80"
 
-vim.o.tabstop = 4
-vim.bo.tabstop = 4
-vim.o.softtabstop = 4
+vim.o.tabstop = 2
+vim.bo.tabstop = 2
+vim.o.softtabstop = 2
 vim.o.shiftround = true
 vim.o.expandtab = true
 vim.bo.expandtab = true
 
 -- >> << 时移动长度
-vim.o.shiftwidth = 4
-vim.bo.shiftwidth = 4
+vim.o.shiftwidth = 2
+vim.bo.shiftwidth = 2
 
 vim.o.autoindent = true
 
@@ -60,7 +59,7 @@ vim.o.termguicolors = true
 vim.opt.termguicolors = true
 
 vim.o.list = true
-vim.o.listchars = "space:·,tab:··"
+-- vim.o.listchars = "space:·,tab:··"
 
 vim.o.wildmenu = true
 vim.o.shortmess = vim.o.shortmess .. "c"
@@ -68,5 +67,4 @@ vim.o.shortmess = vim.o.shortmess .. "c"
 vim.o.pumheight = 10
 vim.o.showtabline = 2
 vim.o.showmode = false
-
 vim.opt.clipboard = "unnamedplus"
