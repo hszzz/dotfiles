@@ -20,11 +20,12 @@ window:
     lines: 36
 
   padding:
-    x: 0
-    y: 0
+    x: 9
+    y: 9
 
   dynamic_padding: false
-  decorations: full
+  # decorations: full
+  decorations: transparent
   startup_mode: Windowed
   opacity: 0.95
 
