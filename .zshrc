@@ -1,23 +1,7 @@
-export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="ys"
-
-export UPDATE_ZSH_DAYS=13
-DISABLE_AUTO_TITLE="true"
-HIST_STAMPS="yyyy-mm-dd"
-DEFAULT_USER="shih"
-
-source $ZSH/oh-my-zsh.sh
-export LANG=en_US.UTF-8
-
-HISTFILE=~/.config/histfile
-HISTSIZE=10000
-SAVEHIST=10000
-setopt SHARE_HISTORY
-
-# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-plugins=(git z sudo zsh-autosuggestions zsh-syntax-highlighting)
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
 # alias
 if [ -f ~/.bash_alias ]; then
@@ -40,20 +24,28 @@ else
   export http_proxy=http://127.0.0.1:7890;
   export all_proxy=socks5://127.0.0.1:7890;
 fi
+
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export PATH="/opt/homebrew/Cellar/qt@5/5.15.8_2/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+# __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+     if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+         . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+     else
+         export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+     fi
+# fi
+#  unset __conda_setup
 # <<< conda initialize <<<
+
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zdharma-continuum/history-search-multi-word
+
+eval "$(starship init zsh)"
 
