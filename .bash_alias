@@ -6,12 +6,12 @@ if [ "$(uname)"=="Darwin" ]; then
   colorflag="-G"
 fi
 
-alias la='ls -a ${colorflag}'
+alias la='ls -A ${colorflag}'
 alias sl='ls ${colorflag}'
 alias l='ls ${colorflag}'
 alias s='ls ${colorflag}'
-alias ll='ls -shlF ${colorflag}'
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+alias ll='ls -AhlF ${colorflag}'
+alias lsd="ls -AlF ${colorflag} | grep --color=never '^d'"
 
 alias ..='cd ..'
 alias ...='cd ../../'
