@@ -16,12 +16,12 @@ live_config_reload: true
 
 window:
   dimensions:
-    columns: 136
+    columns: 126
     lines: 36
 
   padding:
-    x: 9
-    y: 9
+    x: 1
+    y: 0
 
   dynamic_padding: true
   # decorations: full
