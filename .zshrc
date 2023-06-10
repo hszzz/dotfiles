@@ -46,6 +46,7 @@ export PATH="/opt/homebrew/Cellar/qt@5/5.15.8_2/bin:$PATH"
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zdharma-continuum/history-search-multi-word
+zinit light thewtex/tmux-mem-cpu-load # tmux status line
 
 eval "$(starship init zsh)"
 
