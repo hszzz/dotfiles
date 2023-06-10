@@ -23,7 +23,7 @@ return {
     })
 
     require("mason-lspconfig").setup({
-      ensure_installed = { "lua_ls", "bashls", "pyright", "rust_analyzer", "clangd", "gopls" },
+      ensure_installed = { "bashls", "pyright", "rust_analyzer", "clangd", "gopls" },
     })
 
     local servers = {
