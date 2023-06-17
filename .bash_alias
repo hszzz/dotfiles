@@ -8,6 +8,7 @@ fi
 
 alias la='ls -A ${colorflag}'
 alias sl='ls ${colorflag}'
+alias ls='ls ${colorflag}'
 alias l='ls ${colorflag}'
 alias s='ls ${colorflag}'
 alias ll='ls -AhlF ${colorflag}'
