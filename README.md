@@ -1,2 +1,2 @@
-# .myrc
-My personal run configure.
+# dotfiles
+My personal run dotfiles.
