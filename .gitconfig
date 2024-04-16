@@ -1,5 +1,5 @@
 [user]
-  name  = hszzz
+  name  = shih
   email = hszzz.me@gmail.com
 
 [core]
@@ -13,3 +13,6 @@
   pu   = push
   pl   = pull
   adog = log --all --decorate --oneline --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[pull]
+  rebase = true

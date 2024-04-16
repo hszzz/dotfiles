@@ -1,18 +1,24 @@
 #!/bin/bash
 
-colorflag="--color"
-
-if [ "$(uname)"=="Darwin" ]; then
-  colorflag="-G"
+COLOR="--color=auto"
+if [ "$(uname)" = "Darwin" ]; then
+    COLOR=""
 fi
 
-alias la='ls -A ${colorflag}'
-alias sl='ls ${colorflag}'
-alias ls='ls ${colorflag}'
-alias l='ls ${colorflag}'
-alias s='ls ${colorflag}'
-alias ll='ls -AhlF ${colorflag}'
-alias lsd="ls -AlF ${colorflag} | grep --color=never '^d'"
+ls() {
+    if [ "$1" = "--color" ]; then
+        /bin/ls $COLOR "${@:2}"
+    else
+        /bin/ls $COLOR "$@"
+    fi
+}
+
+alias la='ls -a'
+alias sl='ls'
+alias l='ls'
+alias s='ls'
+alias ll='ls -AhlF'
+alias lsd="ls -AlF | grep --color=never '^d'"
 
 alias ..='cd ..'
 alias ...='cd ../../'
